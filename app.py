@@ -4,11 +4,9 @@ from flask import Flask, render_template, request
 from pymongo import MongoClient
 from dotenv import load_dotenv
 
-
+load_dotenv()
 
 def create_app():
-    load_dotenv()
-
     app = Flask(__name__)
     client = MongoClient(os.getenv("MONGODB_URI")) #reprezentacja klastra mongoDB
     #db = client.microblog to łączy się z database mongo
