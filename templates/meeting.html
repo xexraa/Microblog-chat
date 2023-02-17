@@ -4,41 +4,41 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/static/css/style.css" />
-    <title>Microblog</title>
+    <link rel="stylesheet" href="/static/css/meet.css" />
+    <title>Meeting chat</title>
 </head>
 <body>
     <header class="navbar">
         <div class="navbar__brand">
-            <img class="navbar__logo" src="/static/black_sun.png" alt="Microblog logo">Microblog
+            <img class="navbar__logo" src="/static/black_shape.png" alt="Microblog logo">Meeting chat
         </div>
         <ul class="navbar__navigation">
             <li class="navbar__navigation-item">
                 <a href="#" class="navbar__link"></a>
             </li>
             <li class="navbar__navigation-item">
-                <a href="{{ url_for('meeting') }}" class="navbar__link">Meeting!</a>
+                <a href="{{ url_for('home') }}" class="navbar__link">Microblog</a>
             </li>
         </ul>
     </header>
     <main class="main">
         <section>
-            <h1>Add new entry</h1>
-            <form class="form" action="/" method="POST">
+            <h1>What are our plans?</h1>
+            <form class="form" action="/meeting" method="POST">
                 <p class="form__input">
-                    <label for="entry" class="form__label">Entry content:</label>
-                    <textarea name="content" id="entry" class="form__textarea"></textarea>
+                    <label for="meetEntry" class="form__label">Entry content:</label>
+                    <textarea name="meetContent" id="meetEntry" class="form__textarea"></textarea>
                 </p>                
                 <button type="submit" class="form__submit">Submit</button>
             </form>
         </section>
         <section>
-            <h1>Recent posts</h1>
-            {% for entry in entries[::-1][:6] %}
+            <h1>Chat:</h1>
+            {% for entry in meets[::-1][:7] %}
             <article class="entry">
                 <div>
-                    <h2 class="entry__title">{{ entry[0] | truncate(30, true) }}</h2>
-                    <time class="entry__date" datetime="{{ entry[1] }}">○ {{ entry[2] }} {{ entry[3] }}</time>
+                    <h2 class="entry__title">{{ entry[0] | truncate(15, true) }}</h2>
+                    <time class="entry__date" datetime="{{ entry[1] }}">○ {{ entry[1] }}</time>
                 </div>
                 <p class="entry__content">
                     {{ entry[0] }}

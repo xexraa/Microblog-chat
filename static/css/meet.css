@@ -1,5 +1,6 @@
 html {
     font-family: Lato, sans-serif;
+    color: #6D5F2D;
     background: #C8C4C4;
 }
 
@@ -10,12 +11,14 @@ html {
 body {
     box-sizing: border-box;
     margin: 0;
+    background-image: url("/static/background1.png");
+    background-size: cover;
 }
    
 
 .navbar {
     max-width: 640px;
-    margin: 50px auto;
+    margin: 0 auto;
     padding: 0 20px;
     display: flex;
     flex-direction: row;
@@ -25,6 +28,7 @@ body {
 }
 
 .navbar__brand {
+    margin: 10px 0 0 0;
     display: flex;
     align-items: center;
 }
@@ -34,6 +38,7 @@ body {
     width: 100px;
     height: 100px;
     border-radius: 50%;
+    align-items: center;
 }
 
 .navbar__navigation {
@@ -42,10 +47,12 @@ body {
     padding: 0;
     list-style: none;
     color: #5c6b70;
+    align-items: center;
 }
 
 .navbar__navigation-item {
     margin-left: 50px;
+    align-items: center;
 }
 
 .navbar__link {
