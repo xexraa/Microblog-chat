@@ -10,7 +10,7 @@
 
 ## Web project.
 
-The main premise of this application is to run a small blog with with chat option
+The main premise of this application is to run a small blog with chat option
 
 ## What does this project have?
 
