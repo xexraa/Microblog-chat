@@ -17,7 +17,7 @@
                 <a href="#" class="navbar__link"></a>
             </li>
             <li class="navbar__navigation-item">
-                <a href="{{ url_for('meeting') }}" class="navbar__link">Meeting!</a>
+                <a href="{{ url_for('meeting') }}" class="navbar__link">Chat</a>
             </li>
         </ul>
     </header>
@@ -34,7 +34,7 @@
         </section>
         <section>
             <h1>Recent posts</h1>
-            {% for entry in entries[::-1][:6] %}
+            {% for entry in entries[::-1][:7] %}
             <article class="entry">
                 <div>
                     <h2 class="entry__title">{{ entry[0] | truncate(30, true) }}</h2>
